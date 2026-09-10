@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geografia | Energia Nuclear no Espaço Mundial</title>
+    <title>Geografia | A Energia Nuclear no Espaço Mundial</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #07090e;
-            --card-bg: rgba(19, 28, 46, 0.7);
+            --bg-color: #04060a;
+            --card-bg: rgba(13, 20, 35, 0.8);
             --accent-cyan: #00f0ff;
             --accent-green: #00ff88;
-            --accent-purple: #9d4edd;
+            --accent-blue: #3b82f6;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --border-glow: rgba(0, 240, 255, 0.2);
+            --border-glow: rgba(0, 240, 255, 0.25);
         }
 
         * {
@@ -32,35 +32,35 @@
             line-height: 1.7;
             overflow-x: hidden;
             background-image: 
-                radial-gradient(circle at 15% 15%, rgba(0, 240, 255, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 85% 85%, rgba(157, 78, 221, 0.05) 0%, transparent 40%);
+                radial-gradient(circle at 10% 10%, rgba(0, 240, 255, 0.07) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(59, 130, 246, 0.07) 0%, transparent 40%);
         }
 
-        /* TELA DE ENTRADA / CAPA DO TRABALHO */
+        /* TELA DE ENTRADA (CAPA) */
         #capa-trabalho {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100vh;
-            background: linear-gradient(135deg, #07090e, #0f172a);
+            background: radial-gradient(circle at center, #0a1124 0%, #04060a 100%);
             z-index: 9999;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.6s ease, visibility 0.6s ease;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
         }
 
         .capa-box {
             text-align: center;
             background: var(--card-bg);
             border: 2px solid var(--accent-cyan);
-            padding: 50px 40px;
-            border-radius: 20px;
-            box-shadow: 0 0 40px rgba(0, 240, 255, 0.25);
-            max-width: 600px;
+            padding: 60px 40px;
+            border-radius: 24px;
+            box-shadow: 0 0 50px rgba(0, 240, 255, 0.3), inset 0 0 20px rgba(0, 240, 255, 0.1);
+            max-width: 650px;
             width: 90%;
-            backdrop-filter: blur(15px);
+            backdrop-filter: blur(20px);
             animation: fadeInDown 1s ease-out;
         }
 
@@ -68,31 +68,33 @@
             font-family: 'Orbitron', sans-serif;
             color: var(--accent-cyan);
             font-size: 1.1rem;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             margin-bottom: 15px;
             text-transform: uppercase;
         }
 
         .capa-box h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             margin-bottom: 25px;
             color: var(--text-main);
             line-height: 1.3;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
 
         .aluno-info {
             background: rgba(0, 240, 255, 0.05);
             border: 1px dashed var(--accent-cyan);
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 30px;
+            padding: 18px;
+            border-radius: 12px;
+            margin-bottom: 35px;
         }
 
         .aluno-info p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--text-main);
             font-weight: 600;
+            margin: 5px 0;
         }
 
         .aluno-info span {
@@ -113,13 +115,13 @@
 
         /* HEADER / MENU */
         header {
-            background: rgba(7, 9, 14, 0.85);
+            background: rgba(4, 6, 10, 0.85);
             border-bottom: 1px solid var(--border-glow);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(15px);
         }
 
         .nav-container {
@@ -137,7 +139,7 @@
             color: var(--accent-cyan);
             font-weight: 900;
             letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+            text-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
         }
 
         nav ul {
@@ -160,19 +162,21 @@
             text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION COM IMAGEM REAL DE FUNDO */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 120px 20px 60px;
             position: relative;
         }
 
         .hero-content {
             max-width: 900px;
+            margin-bottom: 40px;
             animation: fadeInDown 1s ease-out;
         }
 
@@ -193,12 +197,60 @@
         .hero p {
             font-size: 1.25rem;
             color: var(--text-muted);
-            margin-bottom: 40px;
+            margin-bottom: 35px;
+        }
+
+        /* BANNER COM IMAGEM REAL DE USINA NUCLEAR DE FUNDO */
+        .hero-banner {
+            width: 100%;
+            max-width: 1100px;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(4, 6, 10, 0.8), rgba(7, 16, 36, 0.7)), 
+                        url('https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid var(--border-glow);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 240, 255, 0.15);
+            overflow: hidden;
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            pointer-events: none;
+        }
+
+        .banner-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            color: #ffffff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(0, 240, 255, 0.8);
+            margin-bottom: 10px;
+        }
+
+        .banner-subtitle {
+            font-size: 1.05rem;
+            color: var(--accent-green);
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
         }
 
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, transparent, rgba(0, 240, 255, 0.1));
+            background: linear-gradient(135deg, transparent, rgba(0, 240, 255, 0.12));
             color: var(--accent-cyan);
             border: 2px solid var(--accent-cyan);
             padding: 14px 35px;
@@ -252,7 +304,7 @@
             border-radius: 2px;
         }
 
-        /* GRID E CARDS COM EFEITO GLASSMORPHISM */
+        /* GRID E CARDS */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -269,11 +321,12 @@
             background: var(--card-bg);
             border: 1px solid var(--border-glow);
             padding: 35px;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
+            border-radius: 18px;
+            backdrop-filter: blur(12px);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .card::before {
@@ -291,7 +344,7 @@
         .card:hover {
             transform: translateY(-8px);
             border-color: var(--accent-cyan);
-            box-shadow: 0 15px 35px rgba(0, 240, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 240, 255, 0.2);
         }
 
         .card:hover::before {
@@ -329,7 +382,7 @@
             color: var(--accent-cyan);
         }
 
-        /* TIMELINE HISTÓRICA / GEOPOLÍTICA */
+        /* TIMELINE GEOPOLÍTICA */
         .timeline {
             position: relative;
             max-width: 900px;
@@ -365,6 +418,7 @@
             top: 20px;
             border-radius: 50%;
             z-index: 1;
+            box-shadow: 0 0 10px var(--accent-cyan);
         }
 
         .left {
@@ -382,7 +436,7 @@
         .timeline-content {
             padding: 25px;
             background: var(--card-bg);
-            border-radius: 12px;
+            border-radius: 14px;
             border: 1px solid var(--border-glow);
             backdrop-filter: blur(10px);
         }
@@ -391,6 +445,32 @@
             font-family: 'Orbitron', sans-serif;
             color: var(--accent-cyan);
             margin-bottom: 8px;
+        }
+
+        /* SEÇÃO ESCOLA */
+        .escola-box {
+            background: linear-gradient(135deg, rgba(13, 20, 35, 0.9), rgba(5, 10, 20, 0.95));
+            border: 2px solid var(--accent-cyan);
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 0 40px rgba(0, 240, 255, 0.2);
+            backdrop-filter: blur(15px);
+        }
+
+        .escola-box h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--accent-cyan);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .escola-box p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
         }
 
         /* ANIMAÇÕES DE SCROLL */
@@ -407,7 +487,7 @@
 
         /* RODAPÉ */
         footer {
-            background: #040508;
+            background: #020305;
             text-align: center;
             padding: 50px 20px;
             color: var(--text-muted);
@@ -421,8 +501,9 @@
         }
 
         /* RESPONSIVIDADE */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
+        @media (max-width: 900px) {
+            .hero-banner { display: none; }
+            .hero h1 { font-size: 2.3rem; }
             .grid-2 { grid-template-columns: 1fr; }
             .timeline::after { left: 31px; }
             .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
@@ -466,18 +547,24 @@
                     <li><a href="#distribuicao">No Mundo</a></li>
                     <li><a href="#brasil">Caso do Brasil</a></li>
                     <li><a href="#impactos">Espaço & Ambiente</a></li>
-                    <li><a href="#desafios">Desafios Globais</a></li>
+                    <li><a href="#desafios">Desafios</a></li>
+                    <li><a href="#escola">Nossa Escola</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- HERO COM IMAGEM REAL DE FUNDO (VERSÃO COMPUTADOR) -->
     <section id="inicio" class="hero">
         <div class="hero-content">
             <h1>Geografia da Energia Nuclear: <span>Poder e Território</span></h1>
             <p>Como a tecnologia atômica modela fronteiras, economias globais, redes de energia e a organização do espaço geográfico mundial.</p>
             <a href="#geopolitica" class="btn">Explorar Conteúdo</a>
+        </div>
+        
+        <div class="hero-banner">
+            <div class="banner-title">O Impacto Atômico no Planeta</div>
+            <div class="banner-subtitle">Geografia, Território e Matrizes Energéticas</div>
         </div>
     </section>
 
@@ -580,6 +667,15 @@
         </div>
     </section>
 
+    <!-- SEÇÃO CONHEÇA NOSSA ESCOLA -->
+    <section id="escola" class="reveal">
+        <div class="escola-box">
+            <h3>Conheça Nossa Escola</h3>
+            <p>Visite o portal oficial para acompanhar novidades, projetos e conteúdos acadêmicos.</p>
+            <a href="https://www.fenixonline.com.br/" target="_blank" class="btn">Acessar Fênix Online ➔</a>
+        </div>
+    </section>
+
     <!-- RODAPÉ -->
     <footer>
         <p>Trabalho Escolar de Geografia &copy; 2026. Desenvolvido com excelência por <span>Davi Santana Lima</span> (<span>7º B</span>).</p>
@@ -587,16 +683,14 @@
 
     <!-- SCRIPT DE CONTROLE DA CAPA E ANIMAÇÕES -->
     <script>
-        // Função para sumir com a capa ao clicar no botão
         function entrarSite() {
             const capa = document.getElementById('capa-trabalho');
             capa.style.opacity = '0';
             setTimeout(() => {
                 capa.style.display = 'none';
-            }, 600);
+            }, 800);
         }
 
-        // Barra de progresso de leitura no topo
         window.onscroll = function() {
             let winScroll = document.documentElement.scrollTop || document.body.scrollTop;
             let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -604,7 +698,6 @@
             document.getElementById("progress-bar").style.width = scrolled + "%";
         };
 
-        // Animação de aparição suave (Scroll Reveal)
         window.addEventListener('scroll', revealElements);
 
         function revealElements() {
@@ -624,3 +717,4 @@
     </script>
 </body>
 </html>
+
